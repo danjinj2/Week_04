@@ -5,12 +5,12 @@ import ToDoListItem from "./components/toDoListItem";
 class App extends Component {
   state = {
     todoListTitle: "My Todo List",
-    todos: ["Walk to latea", "Get boba"]
+    todos: ["element 1", "element 2"]
   };
 
   addParameter = () => {
     this.setState({
-      todos: [...this.state.todos, "Get more boba"]
+      todos: []
     })
   };
 
@@ -21,7 +21,7 @@ class App extends Component {
         {this.state.todos.map(x => (
           <ToDoListItem todo={x} />
         ))}
-        <button onClick={this.addParameter}> Add todo</button>
+        <button onClick={this.addParameter}> Delete todo</button>
       </div>
     );
   }
